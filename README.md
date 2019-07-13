@@ -73,3 +73,23 @@ Adds a optional delay to transitions before it starts
 
 #### distance `(Dimension)` `Optional` `Only for few transition`
 For few transitions you can configure the distance parameter to control the animation
+
+# Transitions
+
+Here is the list of transitions available as User Defind Commands:
+
+| User Defined Commands        |                    |                     |                      |
+| ----------------- | ------------------ | ------------------- | -------------------- |
+| `bounce`          | `flash`            | `pulse`             | `rubberBand`         |
+| `shake`           | `tada`             | `wobble`            | `jello`              |
+| `bounceIn`        | `bounceInDown`     | `bounceInLeft`      | `bounceInRight`      |
+| `bounceInUp`      | `bounceOut`        | `bounceOutDown`     | `bounceOutLeft`      |
+| `bounceOutRight`   | `bounceOutUp`      | `fadeIn`            | `fadeInDown`         |
+| `fadeInLeft`      | `fadeInRight`      | `fadeInUp`          | `fadeOut`            |
+| `fadeOutDown`      | `fadeOutLeft`      | `fadeOutRight`      | `fadeOutUp`          |
+| `lightSpeedIn`    | `lightSpeedOut`    | `rotateIn`          | `jackInTheBox`       |
+| `rollIn`          | `rollOut`          | `zoomIn`            | `zoomInDown`         |
+| `zoomInLeft`      | `zoomInRight`      | `zoomInUp`          | `zoomOut`            |
+| `zoomOutDown`     | `zoomOutLeft`      | `zoomOutRight`      | `zoomOutUp`          |
+| `slideInDown`     | `slideInLeft`      | `slideInRight`      | `slideInUp`          |
+| `slideOutDown`    | `slideOutLeft`     | `slideOutRight`     | `slideOutUp`         |
