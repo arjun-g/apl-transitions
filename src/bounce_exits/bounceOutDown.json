@@ -1,0 +1,75 @@
+{
+    "parameters": [
+        "duration",
+        "distance",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "delay": "${delay || 0}",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateY": "0"
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateY": "10px"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateY": "10px"
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateY": "-20px"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Idle",
+            "delay": "${duration * 0.05}"
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.55}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "to": 0
+                },
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateY": "-20px"
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateY": "${distance || '200vh'}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

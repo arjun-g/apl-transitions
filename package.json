@@ -1,0 +1,12 @@
+{
+  "name": "apl-transitions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd scripts && node build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

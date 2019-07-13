@@ -1,0 +1,100 @@
+{
+    "parameters": [
+        "duration",
+        "distance",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "Sequential",
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "delay": "${delay || 0}",
+                    "duration": "${duration * 0.6}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "${distance || '200vh'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-20px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-20px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-5px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-5px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

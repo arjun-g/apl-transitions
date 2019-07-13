@@ -1,0 +1,205 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "scaleX": 1,
+                            "scaleY": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "scaleX": 0.9,
+                            "scaleY": 0.9
+                        },
+                        {
+                            "rotate": -3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Idle",
+            "delay": "${duration * 0.1}"
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "scaleX": 0.9,
+                            "scaleY": 0.9
+                        },
+                        {
+                            "rotate": -3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "scaleX": 1.1,
+                            "scaleY": 1.1
+                        },
+                        {
+                            "rotate": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": -3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": -3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": -3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": -3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": -3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": -3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.1}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "scaleX": 1.1,
+                            "scaleY": 1.1
+                        },
+                        {
+                            "rotate": 3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "scaleX": 1,
+                            "scaleY": 1
+                        },
+                        {
+                            "rotate": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

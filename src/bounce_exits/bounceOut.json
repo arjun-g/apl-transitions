@@ -1,0 +1,80 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "delay": "${delay || 0}",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "scaleX": 0,
+                            "scaleY": 0
+                        }
+                    ],
+                    "to": [
+                        {
+                            "scaleX": 0.9,
+                            "scaleY": 0.9
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.3}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "scaleX": 0.9,
+                            "scaleY": 0.9
+                        }
+                    ],
+                    "to": [
+                        {
+                            "scaleX": 1.1,
+                            "scaleY": 1.1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Idle",
+            "delay": "${duration * 0.05}"
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.45}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "to": 0
+                },
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "scaleX": 1.1,
+                            "scaleY": 1.1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "scaleX": 0.3,
+                            "scaleY": 0.3
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

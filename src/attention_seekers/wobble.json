@@ -1,0 +1,159 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.15}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateX": "0"
+                        },
+                        {
+                            "rotate": 0
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": "-25%"
+                        },
+                        {
+                            "rotate": -5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.15}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateX": "-25%"
+                        },
+                        {
+                            "rotate": -5
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": "20%"
+                        },
+                        {
+                            "rotate": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.15}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateX": "20%"
+                        },
+                        {
+                            "rotate": 3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": "-15%"
+                        },
+                        {
+                            "rotate": -3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.15}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateX": "-15%"
+                        },
+                        {
+                            "rotate": -3
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": "10%"
+                        },
+                        {
+                            "rotate": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.15}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateX": "15%"
+                        },
+                        {
+                            "rotate": 2
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": "-5%"
+                        },
+                        {
+                            "rotate": -1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.25}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateX": "-5%"
+                        },
+                        {
+                            "rotate": -1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": "0"
+                        },
+                        {
+                            "rotate": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

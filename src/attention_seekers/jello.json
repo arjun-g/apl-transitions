@@ -1,0 +1,180 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "Idle",
+            "delay": "${(duration * 0.111) + (delay || 0)}"
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.111}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": 0,
+                            "skewY": 0
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": -12.5,
+                            "skewY": -12.5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.111}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": -12.5,
+                            "skewY": -12.5
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": 6.25,
+                            "skewY": 6.25
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.111}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": 6.25,
+                            "skewY": 6.25
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": -3.125,
+                            "skewY": -3.125
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.111}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": -3.125,
+                            "skewY": -3.125
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": 1.5625,
+                            "skewY": 1.5625
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.111}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": 1.5625,
+                            "skewY": 1.5625
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": -0.78125,
+                            "skewY": -0.78125
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.111}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": -0.78125,
+                            "skewY": -0.78125
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": 0.390625,
+                            "skewY": 0.390625
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.111}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": 0.390625,
+                            "skewY": 0.390625
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": -0.1953125,
+                            "skewY": -0.1953125
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.112}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": -0.1953125,
+                            "skewY": -0.1953125
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": 0,
+                            "skewY": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

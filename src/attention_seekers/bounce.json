@@ -1,0 +1,172 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "Sequential",
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.2}",
+                    "delay": "${delay || 0}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.2}",
+                    "easing": "cubic-bezier(0.755, 0.05, 0.855, 0.06)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-30vh"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.03}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-30vh"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-30vh"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-30vh"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.17}",
+                    "easing": "cubic-bezier(0.755, 0.05, 0.855, 0.06)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-15vh"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-15vh"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-15vh"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-4vh"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-4vh"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "Sequential",
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "delay": "${delay || 0}",
+                    "duration": "${duration / 5}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 0.25
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": "0.3",
+                                    "scaleY": "0.3"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": "1.1",
+                                    "scaleY": "1.1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration / 5}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0.25,
+                            "to": 0.5
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": "1.1",
+                                    "scaleY": "1.1"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": "0.9",
+                                    "scaleY": "0.9"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration / 5}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0.5,
+                            "to": 0.75
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": "0.9",
+                                    "scaleY": "0.9"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": "1.03",
+                                    "scaleY": "1.03"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration / 5}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0.75,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": "1.03",
+                                    "scaleY": "1.03"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": "0.97",
+                                    "scaleY": "0.97"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration / 5}",
+                    "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": "0.97",
+                                    "scaleY": "0.97"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": "1",
+                                    "scaleY": "1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

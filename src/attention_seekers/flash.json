@@ -1,0 +1,56 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.25}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 1,
+                    "to": 0
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.25}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 0,
+                    "to": 1
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.25}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 0,
+                    "to": 1
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.25}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 0,
+                    "to": 1
+                }
+            ]
+        }
+    ]
+}

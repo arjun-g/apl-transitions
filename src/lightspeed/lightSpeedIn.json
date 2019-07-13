@@ -1,0 +1,80 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "delay": "${delay || 0}",
+            "duration": "${duration * 0.6}",
+            "easing": "ease-out",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 0,
+                    "to": 1
+                },
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": -30
+                        },
+                        {
+                            "translateX": "100vw"
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": 20
+                        },
+                        {
+                            "translateX": "0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "easing": "ease-out",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": 20
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": -5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "easing": "ease-out",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": -5
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

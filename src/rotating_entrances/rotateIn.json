@@ -1,0 +1,33 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 0,
+                    "to": 1
+                },
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": -200
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

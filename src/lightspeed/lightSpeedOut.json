@@ -1,0 +1,41 @@
+{
+    "parameters": [
+        "duration",
+        "distance",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "delay": "${delay || 0}",
+            "duration": "${duration}",
+            "easing": "ease-in",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 1,
+                    "to": 0
+                },
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "skewX": 0
+                        },
+                        {
+                            "translateX": 0
+                        }
+                    ],
+                    "to": [
+                        {
+                            "skewX": 30
+                        },
+                        {
+                            "translateX": "${distance || '100vw'}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

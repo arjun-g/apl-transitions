@@ -1,0 +1,3621 @@
+{
+    "commands": {
+        "bounce": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.2}",
+                            "delay": "${delay || 0}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.2}",
+                            "easing": "cubic-bezier(0.755, 0.05, 0.855, 0.06)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "-30vh"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.03}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-30vh"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "-30vh"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-30vh"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.17}",
+                            "easing": "cubic-bezier(0.755, 0.05, 0.855, 0.06)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "-15vh"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-15vh"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-15vh"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "-4vh"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-4vh"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "flash": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.25}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.25}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.25}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.25}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "jello": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Idle",
+                    "delay": "${(duration * 0.111) + (delay || 0)}"
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.111}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": 0,
+                                    "skewY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": -12.5,
+                                    "skewY": -12.5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.111}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": -12.5,
+                                    "skewY": -12.5
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": 6.25,
+                                    "skewY": 6.25
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.111}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": 6.25,
+                                    "skewY": 6.25
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": -3.125,
+                                    "skewY": -3.125
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.111}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": -3.125,
+                                    "skewY": -3.125
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": 1.5625,
+                                    "skewY": 1.5625
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.111}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": 1.5625,
+                                    "skewY": 1.5625
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": -0.78125,
+                                    "skewY": -0.78125
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.111}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": -0.78125,
+                                    "skewY": -0.78125
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": 0.390625,
+                                    "skewY": 0.390625
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.111}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": 0.390625,
+                                    "skewY": 0.390625
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": -0.1953125,
+                                    "skewY": -0.1953125
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.112}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": -0.1953125,
+                                    "skewY": -0.1953125
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": 0,
+                                    "skewY": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "pulse": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.5}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1.05,
+                                    "scaleY": 1.05
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.5}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1.05,
+                                    "scaleY": 1.05
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "rubberBand": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.3}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1.25,
+                                    "scaleY": 0.75
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1.25,
+                                    "scaleY": 0.75
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.75,
+                                    "scaleY": 1.25
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.75,
+                                    "scaleY": 1.25
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1.15,
+                                    "scaleY": 0.85
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1.15,
+                                    "scaleY": 0.85
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.95,
+                                    "scaleY": 1.05
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.95,
+                                    "scaleY": 1.05
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1.05,
+                                    "scaleY": 0.95
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.25}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1.05,
+                                    "scaleY": 0.95
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "shake": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "tada": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.9,
+                                    "scaleY": 0.9
+                                },
+                                {
+                                    "rotate": -3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Idle",
+                    "delay": "${duration * 0.1}"
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.9,
+                                    "scaleY": 0.9
+                                },
+                                {
+                                    "rotate": -3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1.1,
+                                    "scaleY": 1.1
+                                },
+                                {
+                                    "rotate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": 3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": -3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": -3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": 3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": -3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": -3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": 3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": -3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": -3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.1}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1.1,
+                                    "scaleY": 1.1
+                                },
+                                {
+                                    "rotate": 3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "wobble": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-25%"
+                                },
+                                {
+                                    "rotate": -5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-25%"
+                                },
+                                {
+                                    "rotate": -5
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "20%"
+                                },
+                                {
+                                    "rotate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "20%"
+                                },
+                                {
+                                    "rotate": 3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-15%"
+                                },
+                                {
+                                    "rotate": -3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-15%"
+                                },
+                                {
+                                    "rotate": -3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "10%"
+                                },
+                                {
+                                    "rotate": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.15}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "15%"
+                                },
+                                {
+                                    "rotate": 2
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "-5%"
+                                },
+                                {
+                                    "rotate": -1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.25}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-5%"
+                                },
+                                {
+                                    "rotate": -1
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "0"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceOut": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "delay": "${delay || 0}",
+                    "duration": "${duration * 0.2}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0,
+                                    "scaleY": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.9,
+                                    "scaleY": 0.9
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.3}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.9,
+                                    "scaleY": 0.9
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1.1,
+                                    "scaleY": 1.1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Idle",
+                    "delay": "${duration * 0.05}"
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.45}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1.1,
+                                    "scaleY": 1.1
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.3,
+                                    "scaleY": 0.3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceOutDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "delay": "${delay || 0}",
+                    "duration": "${duration * 0.2}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.2}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-20px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Idle",
+                    "delay": "${duration * 0.05}"
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.55}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-20px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "${distance || '200vh'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceOutLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "delay": "${delay || 0}",
+                            "duration": "${duration * 0.2}",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "0"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "20px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.8}",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "to": 0
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "20px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "${distance && ('-' + distance) || '-200vw'}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceOutRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "delay": "${delay || 0}",
+                            "duration": "${duration * 0.2}",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "0"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "-20px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.8}",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "to": 0
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "-20px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "${distance || '200vw'}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceOutUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "delay": "${delay || 0}",
+                    "duration": "${duration * 0.2}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "-10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.2}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "-10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "20px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Idle",
+                    "delay": "${duration * 0.05}"
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.55}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "20px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "${distance && ('-' + distance) || '-200vh'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceIn": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "delay": "${delay || 0}",
+                            "duration": "${duration / 5}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0,
+                                    "to": 0.25
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "scaleX": "0.3",
+                                            "scaleY": "0.3"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "scaleX": "1.1",
+                                            "scaleY": "1.1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration / 5}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0.25,
+                                    "to": 0.5
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "scaleX": "1.1",
+                                            "scaleY": "1.1"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "scaleX": "0.9",
+                                            "scaleY": "0.9"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration / 5}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0.5,
+                                    "to": 0.75
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "scaleX": "0.9",
+                                            "scaleY": "0.9"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "scaleX": "1.03",
+                                            "scaleY": "1.03"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration / 5}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0.75,
+                                    "to": 1
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "scaleX": "1.03",
+                                            "scaleY": "1.03"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "scaleX": "0.97",
+                                            "scaleY": "0.97"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration / 5}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "scaleX": "0.97",
+                                            "scaleY": "0.97"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "scaleX": "1",
+                                            "scaleY": "1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceInDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "delay": "${delay || 0}",
+                            "duration": "${duration * 0.6}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0,
+                                    "to": 1
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "${distance && ('-' + distance) || '-200vh'}"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "25px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "25px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "-10px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-10px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "5px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "5px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceInLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "delay": "${delay || 0}",
+                            "duration": "${duration * 0.6}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0,
+                                    "to": 1
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "${distance && ('-' + distance) || '-200vh'}"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "25px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "25px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "-10px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "-10px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "5px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "5px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceInRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "delay": "${delay || 0}",
+                            "duration": "${duration * 0.6}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0,
+                                    "to": 1
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "${distance || '200vh'}"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "25px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "-25px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "10px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "10px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "-5px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateX": "-5px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateX": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "bounceInUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "Sequential",
+                    "commands": [
+                        {
+                            "type": "AnimateItem",
+                            "delay": "${delay || 0}",
+                            "duration": "${duration * 0.6}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "opacity",
+                                    "from": 0,
+                                    "to": 1
+                                },
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "${distance || '200vh'}"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "-20px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-20px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "10px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.15}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "10px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "-5px"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AnimateItem",
+                            "duration": "${duration * 0.1}",
+                            "easing": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+                            "value": [
+                                {
+                                    "property": "transform",
+                                    "from": [
+                                        {
+                                            "translateY": "-5px"
+                                        }
+                                    ],
+                                    "to": [
+                                        {
+                                            "translateY": "0"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeIn": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "${distance || '100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeInUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "${distance || '100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOut": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOutDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "${distance || '100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOutLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOutRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "${distance || '100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "fadeOutUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "lightSpeedIn": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "delay": "${delay || 0}",
+                    "duration": "${duration * 0.6}",
+                    "easing": "ease-out",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": -30
+                                },
+                                {
+                                    "translateX": "100vw"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": 20
+                                },
+                                {
+                                    "translateX": "0"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.2}",
+                    "easing": "ease-out",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": 20
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": -5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.2}",
+                    "easing": "ease-out",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": -5
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "lightSpeedOut": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "delay": "${delay || 0}",
+                    "duration": "${duration}",
+                    "easing": "ease-in",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "skewX": 0
+                                },
+                                {
+                                    "translateX": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "skewX": 30
+                                },
+                                {
+                                    "translateX": "${distance || '100vw'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "rotateIn": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": -200
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "rotateOut": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "rotate": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "rotate": 200
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideInDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideInLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideInRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "${distance || '100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideInUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "${distance || '100%'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideOutDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "${distance || '100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideOutLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideOutRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "${distance || '100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "slideOutUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateY": "${distance && ('-' + distance) || '-100%'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "jackInTheBox": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.5}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 0.5
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "rotate": 30
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.45,
+                                    "scaleY": 0.45
+                                },
+                                {
+                                    "rotate": -10
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.2}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0.5,
+                            "to": 0.7
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.45,
+                                    "scaleY": 0.45
+                                },
+                                {
+                                    "rotate": -10
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.63,
+                                    "scaleY": 0.63
+                                },
+                                {
+                                    "rotate": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.3}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0.7,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.63,
+                                    "scaleY": 0.63
+                                },
+                                {
+                                    "rotate": 3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "rollIn": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "-100%"
+                                },
+                                {
+                                    "rotate": -120
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "0"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "rollOut": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "translateX": "0"
+                                },
+                                {
+                                    "rotate": 0
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "translateX": "100%"
+                                },
+                                {
+                                    "rotate": 120
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomIn": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.5}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.3,
+                                    "scaleY": 0.3
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.65,
+                                    "scaleY": 0.65
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.5}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.65,
+                                    "scaleY": 0.65
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomInDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "delay": "${delay || 0}",
+                    "easing": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateY": "${distance && ('-' + distance) || '-100vh'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "60px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "easing": "cubic-bezier(0.175, 0.885, 0.32, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "60px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomInLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "delay": "${delay || 0}",
+                    "easing": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateX": "${distance && ('-' + distance) || '-100vw'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateX": "10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "easing": "cubic-bezier(0.175, 0.885, 0.32, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateX": "10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateX": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomInRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "delay": "${delay || 0}",
+                    "easing": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateX": "${distance || '100vw'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateX": "-10px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "easing": "cubic-bezier(0.175, 0.885, 0.32, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "-10px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomInUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "delay": "${delay || 0}",
+                    "easing": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 0,
+                            "to": 1
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateY": "${distance || '100vh'}"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "-60px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "easing": "cubic-bezier(0.175, 0.885, 0.32, 1)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "-60px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateY": "0"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomOut": {
+            "parameters": [
+                "duration",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.5}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.3,
+                                    "scaleY": 0.3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Idle",
+                    "delay": "${duration * 0.5}"
+                }
+            ]
+        },
+        "zoomOutDown": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "delay": "${delay || 0}",
+                    "easing": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "-60px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "easing": "cubic-bezier(0.175, 0.885, 0.32, 1)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "-60px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateY": "${distance || '100vh'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomOutLeft": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateX": "42px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateX": "42px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateX": "${distance && ('-' + distance) || '-200vw'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomOutRight": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "delay": "${delay || 0}",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateX": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateX": "-42px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateX": "-42px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateX": "200vw"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "zoomOutUp": {
+            "parameters": [
+                "duration",
+                "distance",
+                "delay"
+            ],
+            "commands": [
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.4}",
+                    "delay": "${delay || 0}",
+                    "easing": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+                    "value": [
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                },
+                                {
+                                    "translateY": "0"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "60px"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "AnimateItem",
+                    "duration": "${duration * 0.6}",
+                    "easing": "cubic-bezier(0.175, 0.885, 0.32, 1)",
+                    "value": [
+                        {
+                            "property": "opacity",
+                            "from": 1,
+                            "to": 0
+                        },
+                        {
+                            "property": "transform",
+                            "from": [
+                                {
+                                    "scaleX": 0.475,
+                                    "scaleY": 0.475
+                                },
+                                {
+                                    "translateY": "60px"
+                                }
+                            ],
+                            "to": [
+                                {
+                                    "scaleX": 0.1,
+                                    "scaleY": 0.1
+                                },
+                                {
+                                    "translateY": "${distance && ('-' + distance) || '-200vh'}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

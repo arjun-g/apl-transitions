@@ -1,0 +1,29 @@
+{
+    "parameters": [
+        "duration",
+        "distance",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "translateX": "${distance && ('-' + distance) || '-100%'}"
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

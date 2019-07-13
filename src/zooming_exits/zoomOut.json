@@ -1,0 +1,39 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.5}",
+            "delay": "${delay || 0}",
+            "value": [
+                {
+                    "property": "opacity",
+                    "from": 1,
+                    "to": 0
+                },
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "scaleX": 1,
+                            "scaleY": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "scaleX": 0.3,
+                            "scaleY": 0.3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Idle",
+            "delay": "${duration * 0.5}"
+        }
+    ]
+}
