@@ -1,32 +1,30 @@
 {
     "parameters": [
         "duration",
-        "distance",
         "delay"
     ],
     "commands": [
         {
             "type": "AnimateItem",
-            "duration": "${duration}",
+            "duration": "${duration * 1}",
             "delay": "${delay || 0}",
             "value": [
                 {
-                    "property": "opacity",
-                    "from": 0,
-                    "to": 1
-                },
-                {
                     "property": "transform",
-                    "from": [
-                        {
-                            "translateY": "${distance || '100%'}"
-                        }
-                    ],
                     "to": [
                         {
+                            "translateX": "-100%",
                             "translateY": "0"
+                        },
+                        {
+                            "skewX": -30
                         }
                     ]
+                },
+                {
+                    "property": "opacity",
+                    "from": "1",
+                    "to": "0"
                 }
             ]
         }

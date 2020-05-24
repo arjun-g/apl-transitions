@@ -1,0 +1,117 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "delay": "${delay || 0}",
+            "easing": "ease-in-out",
+            "value": [
+                {
+                    "property": "transform",
+                    "to": [
+                        {
+                            "rotate": 80
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "easing": "ease-in-out",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 80
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 60
+                        }
+                    ]
+                },
+                {
+                    "property": "opacity",
+                    "to": "1"
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "easing": "ease-in-out",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 60
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 80
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "easing": "ease-in-out",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 80
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 60
+                        }
+                    ]
+                },
+                {
+                    "property": "opacity",
+                    "to": "1"
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 60
+                        }
+                    ],
+                    "to": [
+                        {
+                            "translateX": "0",
+                            "translateY": "700px"
+                        }
+                    ]
+                },
+                {
+                    "property": "opacity",
+                    "from": "1",
+                    "to": "0"
+                }
+            ]
+        }
+    ]
+}

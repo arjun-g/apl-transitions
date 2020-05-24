@@ -18,6 +18,8 @@ var fileList = function (dir, filelist) {
 let files = fileList(path.join(__dirname, '..', '/', 'src') + '/');
 
 let layout = {
+    type: "APL",
+    version: "1.1.0",
     commands: {}
 };
 
@@ -26,5 +28,7 @@ files.forEach(file => {
     let fileName = path.basename(file).replace('.json', '');
     layout.commands[fileName] = JSON.parse(json);
 });
+
+
 
 fs.writeFileSync(path.join(__dirname, '..', 'dist', 'apl-transitions.json'), JSON.stringify(layout, null, 4));

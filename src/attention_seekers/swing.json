@@ -1,0 +1,90 @@
+{
+    "parameters": [
+        "duration",
+        "delay"
+    ],
+    "commands": [
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "delay": "${delay || 0}",
+            "value": []
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 15
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": -10
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": -10
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": 5
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": -5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "AnimateItem",
+            "duration": "${duration * 0.2}",
+            "value": [
+                {
+                    "property": "transform",
+                    "from": [
+                        {
+                            "rotate": -5
+                        }
+                    ],
+                    "to": [
+                        {
+                            "rotate": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
