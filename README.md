@@ -2,6 +2,8 @@
 
 This is collection of transitions for APL components implemented with AnimateItem. All the transitiosn are derived from css transitions available in [Animate.css](https://github.com/daneden/animate.css)
 
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/arjunganesan)
+
 # Usage
 
 ## Adding Transitions to APL Document
