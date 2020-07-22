@@ -4,6 +4,8 @@ This is collection of transitions for APL components implemented with AnimateIte
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/arjunganesan)
 
+For more alexa related tools/libraries visit - https://voicefirst.tools/
+
 # Usage
 
 ## Adding Transitions to APL Document
